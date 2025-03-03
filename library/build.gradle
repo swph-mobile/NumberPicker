@@ -1,15 +1,16 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.novoda.bintray-release'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.1"
+    compileSdkVersion 34
+    buildToolsVersion "33.0.2"
+
+    namespace "com.shawnlin.numberpicker"
 
     defaultConfig {
-        minSdkVersion 15
-        targetSdkVersion 25
-        versionCode VERSION_CODE as int
-        versionName VERSION_NAME
+        minSdkVersion 21
+        targetSdkVersion 33
+        versionCode 1 as int
+        versionName "1"
     }
     buildTypes {
         release {
@@ -20,20 +21,6 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:25.1.0'
-}
-
-publish {
-    userOrg = POM_DEVELOPER_ID
-    groupId = GROUP
-    artifactId = ARTIFACT_ID
-    publishVersion = VERSION_NAME
-    licences = ['Apache-2.0']
-    desc = POM_DESCRIPTION
-    website = POM_URL
-    issueTracker = ISSUE_URL
-    repository = POM_SCM_URL
-    autoPublish = false
-    dryRun = false
+    implementation "androidx.annotation:annotation:1.9.1"
+    implementation 'androidx.core:core:1.13.1'
 }
