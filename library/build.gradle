@@ -2,7 +2,7 @@ apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 34
-    buildToolsVersion "33.0.2"
+    buildToolsVersion "35.0.0"
 
     namespace "com.shawnlin.numberpicker"
 
@@ -22,5 +22,5 @@ android {
 
 dependencies {
     implementation "androidx.annotation:annotation:1.9.1"
-    implementation 'androidx.core:core:1.13.1'
+    implementation 'androidx.core:core:1.16.0'
 }
